@@ -1,0 +1,20 @@
+#!/usr/local/bin/python3
+import sys
+from config import *
+from utils import *
+from download import *
+
+check_args(sys.argv)
+
+url = sys.argv[1]
+assert check_url(url)
+
+url = convert_url(url)
+if not check_if_pdf_exists(url):
+    print("Does not find the PDF in cache, downloading...")
+    download_pdf_from_url(url)
+    print("Downloading Finished. opening...")
+else:
+    print("Find the PDF in cache, opening...")
+
+open_with_pdfreader(load_config_file()['PaperDir']+get_filename(url))
