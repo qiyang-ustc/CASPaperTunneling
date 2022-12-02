@@ -29,7 +29,7 @@ You can include `~/bin` in your `$PATH`. Then just clone this repo to anywhere a
 
 ## Config
 
-- Login to CAS webVPN with Chrome. This program will automatically load the cookies from Chrome.
+- Login to [CAS webVPN](https://webvpn.las.ac.cn) with Chrome. This program will automatically load the cookies from Chrome.
 
 - (Optional) See json config file at `$HOME/.CASPTrc`. Initialized automatically when first run.
 
@@ -43,3 +43,7 @@ Downloading Finished. opening...
 $ caspt https://journals.aps.org/prb/pdf/10.1103/PhysRevB.101.245139
 Find the PDF in cache, opening...
 ```
+
+## Development
+
+There are a lot of features need to be polished, including a more intelligent url process and tests on Windows. Pull requests are very welcome!
