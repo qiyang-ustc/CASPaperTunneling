@@ -47,3 +47,11 @@ Find the PDF in cache, opening...
 ## Development
 
 There are a lot of features need to be polished, including a more intelligent url process and tests on Windows. Pull requests are very welcome!
+
+## Integration
+
+A proper integration of this program will allow you to open the pdf directly from the browser without opening the shell. Just type `caspt` to open your paper!
+
+### macOS
+
+For macOS users with [Alfred](https://www.google.com/search?client=safari&rls=en&q=afred&ie=UTF-8&oe=UTF-8), we also provide a workflow to integrate this program with Alfred. You can load it by clicking `macos/caspt.alfredworkflow` in this repo.
