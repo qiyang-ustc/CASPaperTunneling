@@ -7,3 +7,7 @@ install:
 
 uninstall:
 	rm -f ~/bin/caspt
+
+clear-cache:
+	rm -rf ~/.cached-paper/*
+	touch ~/.cached-paper/downloaded

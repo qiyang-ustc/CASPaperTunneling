@@ -21,6 +21,7 @@ def convert_url(input_url):
 def download_pdf_from_url(url):
     r"""Download a PDF file from url and open it with the default PDF reader."""
     response = requests.get(url,cookies=cj)
-    with open(load_config_file()['PaperDir']+ get_filename(url), 'wb') as f:
+    with open(load_config_file()['PaperDir']+"/"+ get_filename(url), 'wb') as f:
+        print("Download File to "+load_config_file()['PaperDir']+"/"+ get_filename(url))
         f.write(response.content)
     os.system("echo '%s' >> $HOME/.cached-paper/downloaded" % url) # Maybe only availbale in macOS. But try this first

@@ -9,7 +9,7 @@ def main_init():
 
 def load_config_file():
     r"""Load a configuration file from path. or create a template file to it"""
-    config_file = os.environ["HOME"]+".CASPTrc"
+    config_file = os.environ["HOME"]+"/.CASPTrc"
     if not os.path.isfile(config_file):
         print("First Run, Auto Creating Config File at ~/.CASPTrc")
         main_init()

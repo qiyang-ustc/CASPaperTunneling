@@ -10,6 +10,7 @@ url = sys.argv[1]
 assert check_url(url)
 
 url = convert_url(url)
+print("Obtain Converted URL: %s" % url)
 if not check_if_pdf_exists(url):
     print("Does not find the PDF in cache, downloading...")
     download_pdf_from_url(url)
@@ -17,4 +18,4 @@ if not check_if_pdf_exists(url):
 else:
     print("Find the PDF in cache, opening...")
 
-open_with_pdfreader(load_config_file()['PaperDir']+get_filename(url))
+open_with_pdfreader(load_config_file()['PaperDir']+'/'+get_filename(url))
